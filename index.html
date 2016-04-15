@@ -8,8 +8,8 @@
       var REFRESH_TIME = 10;
 
       // Width and height of canvas
-      var CANVAS_WIDTH = 500;
-      var CANVAS_HEIGHT = 300;
+      var CANVAS_WIDTH = 800;
+      var CANVAS_HEIGHT = 500;
 
       // Radius of the ball
       var BALL_RADIUS = 20;
@@ -17,13 +17,28 @@
       // Color of the ball
       var BALL_COLOR = "#ff0000";
 
-      // The x and y position of the ball. Start in the center
-      var ballX = CANVAS_WIDTH / 2;
-      var ballY = CANVAS_HEIGHT / 2;
+      // The x and y position of the ball2. Start in the center
+      var ballX = 0;
+      var ballY = 0;
 
       // The current speed of the ball
       var dx = 1;
       var dy = 5;
+      
+      // Radius of the ball
+      var BALL_RADIUS2 = 10;
+
+      // Color of the ball
+      var BALL_COLOR2 = "#0000ff";
+
+      // The x and y position of the ball. Start in the center
+      var ballX2 = CANVAS_WIDTH / 2;
+      var ballY2 = CANVAS_HEIGHT / 2;
+
+      // The current speed of the ball
+      var dx2 = 1;
+      var dy2 = 5;
+
 
       /**
        * This function takes a 2d canvas context and draws a ball on it at ballX and ballY
@@ -48,6 +63,8 @@
         context.beginPath();
         context.fillStyle = BALL_COLOR;
         context.arc(ballX, ballY, BALL_RADIUS, 0, 2 * Math.PI, true);
+        context.fillStyle = BALL_COLOR2;
+        context.arc(ballX2, ballY2, BALL_RADIUS2, 0, 2 * Math.PI, true);
         context.closePath();
         context.fill();
       }
@@ -87,17 +104,4 @@
     <canvas id="pongCanvas" width="500" height="300"></canvas>
   </body>
 </html> 
-// Radius of the ball
-      var BALL_RADIUS = 15;
-
-    // Color of the ball
-    var BALL_COLOR = "#ff00ff";
-
-    // The x and y position of the ball. Start in the center
-      var ballX = CANVAS_WIDTH / 2;
-      var ballY = CANVAS_HEIGHT / 2;
-
-    // The current speed of the ball
-      var dx = 1;
-      var dy = 5;
 
